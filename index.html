@@ -23,18 +23,20 @@
             font-family: 'Playfair Display', serif;
             letter-spacing: 1px;
         }
-
-        header {
-    padding: 10px 50px; /* Трохи менше падінгу зверху/знизу */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+header {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 24px; font-weight: bold; color: #1a2a6c; text-transform: uppercase; }
+        nav a { margin-left: 20px; text-decoration: none; color: #2c3e50; font-size: 14px; transition: 0.3s; }
+        nav a:hover { color: #b19470; }
 
 .logo-container {
     display: flex;
@@ -131,6 +133,25 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: 0.3s;
         }
+
+         p, 
+         h3
+          {
+            margin: 0;
+         }
+
+        .artist-card-name {
+            margin: 0;
+            padding-top: 10px;
+        }
+        .artist-card-title {
+            padding-bottom: 7px;
+
+        }
+
+        /* .artist-card-text {
+            padding-top: 5px;
+        } */
 
         .artist-card:hover {
             transform: translateY(-5px);
@@ -261,27 +282,27 @@
         <div class="artists-grid">
             <div class="artist-card">
                 <div class="artist-img"
-                    style="background-image: url('https://images.unsplash.com/photo-1520529011348-62a00971a150?auto=format&fit=crop&w=400&q=80'); background-size: cover;">
+                    style="background-image: url('./images/зображення_viber_2025-12-16_21-25-00-444.jpg'); background-size: cover;">
                 </div>
-                <h3>Piano Vocalist Duo</h3>
-                <p>Jazz, Pop & Soul Classics</p>
+                <h2 class="artist-card-name">Oksana</h2>
+                <h3 class="artist-card-title">Classical Pianist</h3>
+                <p class="artist-card-text">Country – Ukraine</p>
+                <p class="artist-card-text">Work experience:</p>
+                <p class="artist-card-text">- SAGA CRUISES LTD Aug 2024/ Jun 2025 classical pianist in "Victory piano quartet"</p>
+                <p class="artist-card-text">- Holland America Line Oct 2025 </p>
                 <a href="#" class="btn">VIEW PROMO</a>
             </div>
             <div class="artist-card">
                 <div class="artist-img"
-                    style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80'); background-size: cover;">
+                    style="background-image: url('/images/Знімок\ екрана\ 2025-12-16\ 222652.png'); background-size: cover;">
                 </div>
-                <h3>Show Band</h3>
-                <p>High Energy Party Band</p>
-                <a href="#" class="btn">VIEW PROMO</a>
-            </div>
-            <div class="artist-card">
-                <div class="artist-img"
-                    style="background-image: url('https://images.unsplash.com/photo-1514525253361-b83f859b73c0?auto=format&fit=crop&w=400&q=80'); background-size: cover;">
-                </div>
-                <h3>Solo Guitarist</h3>
-                <p>Acoustic Lounge & Flamenco</p>
-                <a href="#" class="btn">VIEW PROMO</a>
+                <h2 class="artist-card-name">Maksym</h2>
+                <h3 class="artist-card-title">Viola</h3>
+                <p class="artist-card-text">Country – Ukraine</p>
+                <p class="artist-card-text">Work experience:</p>
+                <p class="artist-card-text">- String Quartet Leader, Oceania Cruises — 2016-present</p>
+                <p class="artist-card-text">- Viola Player, Holland America Line, Princess Cruises — 2009-2012</p>
+                <a href="https://youtu.be/lgkoGAQgw_Q" target="_blank" class="btn">VIEW PROMO</a>
             </div>
 
             <div class="artist-card">
@@ -302,14 +323,14 @@
                 <a href="#" class="btn">VIEW PROMO</a>
             </div>
 
-            <div class="artist-card">
+            <!-- <div class="artist-card">
                 <div class="artist-img"
                     style="background-image: url('https://images.unsplash.com/photo-1514525253361-b83f859b73c0?auto=format&fit=crop&w=400&q=80'); background-size: cover;">
                 </div>
                 <h3>Solo Guitarist</h3>
                 <p>Acoustic Lounge & Flamenco</p>
                 <a href="#" class="btn">VIEW PROMO</a>
-            </div>
+            </div> -->
         </div>
 
     </section>
