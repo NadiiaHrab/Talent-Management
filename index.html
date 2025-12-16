@@ -25,24 +25,46 @@
         }
 
         header {
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #fff;
-            border-bottom: 1px solid #eee;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    padding: 10px 50px; /* Трохи менше падінгу зверху/знизу */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1a2a6c;
-            text-transform: uppercase;
-        }
+.logo-container {
+    display: flex;
+    align-items: center;
+}
 
+.site-logo {
+    height: 60px; /* Регулюйте висоту логотипу тут */
+    width: auto;  /* Ширина підлаштується автоматично */
+    transition: transform 0.3s ease;
+}
+
+.site-logo:hover {
+    transform: scale(1.05); /* Ефект легкого збільшення при наведенні */
+}
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .site-logo {
+        height: 50px; /* Трохи менше лого на смартфонах */
+        margin-bottom: 10px;
+    }
+    nav {
+        margin-top: 5px;
+    }
+}
         nav a {
             margin-left: 20px;
             text-decoration: none;
@@ -199,14 +221,14 @@
 
 <body>
 
-    <header>
-        <div class="logo">Mori Calderon</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#artists">Artists</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <div class="logo">Mori Calderon</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#artists">Artists</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
     <section class="hero">
         <h1>Mori Calderon Talent Management</h1>
