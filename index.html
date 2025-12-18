@@ -10,6 +10,11 @@
         rel="stylesheet">
     <style>
         /* Стилі для елегантного вигляду */
+        
+        html {
+           scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
@@ -25,66 +30,89 @@
         }
 
         
+/* Контейнер всього заголовка */
 header {
-            padding: 10px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #fff;
-            border-bottom: 1px solid #eee;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        } 
-.logo { font-size: 24px; font-weight: bold; color: #1a2a6c; text-transform: uppercase; }
-        nav a { margin-left: 20px; text-decoration: none; color: #2c3e50; font-size: 14px; transition: 0.3s; }
-        nav a:hover { color: #b19470; }
-
-.logo-container {
     display: flex;
-    align-items: center;
+    justify-content: space-between; /* Лого зліва, навігація справа */
+    align-items: center;            /* Вирівнювання по центру висоти */
+    padding: 10px 5%;               /* Відступи зліва та справа */
+    background-color: #ffffff;
+    position: sticky;               /* Заголовок залишається вгорі при скролі */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Легка тінь для преміального вигляду */
 }
 
+/* Блок, де лежить лого і текст */
+.logo-container {
+    display: flex;
+    align-items: center;            /* Вирівнює картинку і текст по одній лінії */
+    gap: 15px;                     /* Відстань між картинкою і текстом */
+}
+
+/* Стиль картинки-логотипу */
 .site-logo {
-    height: 70px; /* Регулюйте висоту логотипу тут */
-    width: auto;  /* Ширина підлаштується автоматично */
+    height: 65px;                   /* Висота для гарної видимості деталей */
+    width: auto;                    /* Пропорції зберігаються автоматично */
+    display: block;
     transition: transform 0.3s ease;
-    margin-right: 15px;
+    cursor: pointer;
 }
 
 .site-logo:hover {
-    transform: scale(1.05); /* Ефект легкого збільшення при наведенні */
-    opacity: 0.9;
+    transform: scale(1.05);         /* Легкий ефект при наведенні */
 }
 
+/* Стиль тексту Mori Calderon */
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #2c3e50;                 /* Глибокий темно-синій/сірий колір */
+    font-family: 'Playfair Display', serif; /* Рекомендую цей шрифт для вишуканості */
+}
 
+/* Навігаційне меню */
+nav {
+    display: flex;
+    gap: 25px;                      /* Відстань між пунктами меню */
+}
 
-/* Адаптація для мобільних */
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #b19470;                 /* Золотистий колір при наведенні */
+}
+
+/* Адаптація для смартфонів */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: column;     /* Логотип зверху, меню знизу */
         padding: 15px;
+        text-align: center;
     }
-    .site-logo {
-        height: 50px; /* Трохи менше лого на смартфонах */
+
+    .logo-container {
+        flex-direction: column;     /* Текст під картинкою на малих екранах */
+        gap: 5px;
         margin-bottom: 10px;
     }
+
+    .site-logo {
+        height: 50px;               /* Менший розмір для мобільних */
+    }
+
     nav {
-        margin-top: 5px;
+        gap: 15px;
     }
 }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #b19470;
-        }
-
         /* Головний блок */
         .hero {
             height: 80vh;
@@ -272,9 +300,9 @@ header {
     </nav>
 </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <h1>Mori Calderon Talent Management</h1>
-        <p>Curated Excellence for Global Maritime Stages</p>
+        <p>Curated Excellence in Entertainment</p>
     </section>
 
     <section id="about" class="section">
@@ -303,7 +331,7 @@ header {
         <div class="artists-grid">
             <div class="artist-card">
                 <div class="artist-img"
-                    style="background-image: url('./images/зображення_viber_2025-12-16_21-25-00-444.jpg'); background-size: cover;">
+                    style="background-image: url('./images/Oksana.jpg'); background-size: cover;">
                 </div>
                 <h2 class="artist-card-name">Oksana</h2>
                 <h3 class="artist-card-title">Classical Pianist</h3>
@@ -315,7 +343,7 @@ header {
             </div>
             <div class="artist-card">
                 <div class="artist-img"
-                    style="background-image: url('/images/Знімок\ екрана\ 2025-12-16\ 222652.png'); background-size: cover;">
+                    style="background-image: url('./images/Maksym.png'); background-size: cover;">
                 </div>
                 <h2 class="artist-card-name">Maksym</h2>
                 <h3 class="artist-card-title">Viola</h3>
@@ -325,8 +353,7 @@ header {
                 <p class="artist-card-text">- Viola Player, Holland America Line, Princess Cruises — 2009-2012</p>
                 <a href="https://youtu.be/lgkoGAQgw_Q" target="_blank" class="btn">VIEW PROMO</a>
             </div>
-
-    <div class="artist-card">
+            <div class="artist-card">
         <div class="artist-img"
             style="background-image: url('./images/James.JPG'); background-size: cover;">
         </div>
@@ -337,7 +364,7 @@ header {
         <p class="artist-card-text">- Princess Cruises 1997-2001</p>
         <p class="artist-card-text">-SAGA CRUISES LTD Dec 2023/ Dec 2025</p>
         <a href="https://www.youtube.com/watch?v=gk6IWh85vRg&t=61s" target="_blank" class="btn">VIEW PROMO</a>
-    </div>
+            </div>
 
             <div class="artist-card">
                 <div class="artist-img"
